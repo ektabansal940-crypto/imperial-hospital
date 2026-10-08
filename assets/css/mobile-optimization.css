@@ -1,0 +1,880 @@
+/* ==========================================================================
+   Imperial Hospital - Dedicated Mobile & Tablet Responsive Optimization (v4.0)
+   Strictly affects viewports <= 1024px (Mobile & Tablet only).
+   Desktop layout (>= 1025px) remains 100% UNTOUCHED and unchanged.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL MOBILE VIEWPORT & BASE RESETS (<= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    html, body {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        -webkit-text-size-adjust: 100% !important;
+        -webkit-tap-highlight-color: transparent !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box !important;
+    }
+
+    img, picture, video, canvas, svg {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Section & Container Resets - Eliminates dead whitespace between sections */
+    .elementor-section.elementor-top-section,
+    .e-con-parent,
+    .e-con.e-parent {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    .elementor-section.elementor-section-boxed > .elementor-container,
+    .elementor-container,
+    .e-con-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Column Reset - Stacks cleanly without horizontal overflowing gaps */
+    .elementor-column,
+    .elementor-column.elementor-col-100,
+    .elementor-column.elementor-col-50,
+    .elementor-column.elementor-col-33,
+    .elementor-column.elementor-col-25,
+    .elementor-column.elementor-col-20,
+    .elementor-top-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Clean inner sections reset - Prevents random white boxes and bloated padding */
+    .elementor-inner-section {
+        padding: 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+
+    /* Elementor generic margin/gap overrides on mobile */
+    .elementor-widget:not(:last-child) {
+        margin-bottom: 12px !important;
+    }
+
+    /* Specific element margin-gap fixes across homepage and inner pages */
+    .elementor-element.elementor-element-ec80242,
+    .elementor-element.elementor-element-061844f,
+    .elementor-element.elementor-element-dfd9b3c,
+    .elementor-element.elementor-element-9dff5c7,
+    .elementor-element.elementor-element-3f924fb,
+    .elementor-element.elementor-element-7d0557e,
+    .elementor-element.elementor-element-503ce95,
+    .elementor-element.elementor-element-ec9b084,
+    .elementor-element.elementor-element-8c643dc,
+    .elementor-element.elementor-element-05b0d67,
+    .elementor-element.elementor-element-e7de8c8,
+    .elementor-element.elementor-element-6f98af5,
+    .elementor-element.elementor-element-2f358e5 {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        --margin-top: 0px !important;
+        --margin-bottom: 0px !important;
+    }
+
+    /* Clean typography scaling for mobile */
+    .elementor-widget-heading .elementor-heading-title {
+        font-size: clamp(20px, 6vw, 28px) !important;
+        line-height: 1.25 !important;
+        margin-bottom: 8px !important;
+        word-break: break-word;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO SLIDER MOBILE OPTIMIZATION (<= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    .elementor-element-8662dfd .wpr-advanced-slider,
+    .elementor-element-8662dfd .wpr-slider-item,
+    .elementor-element-8662dfd .slick-list,
+    .elementor-element-8662dfd .slick-track {
+        height: auto !important;
+        min-height: 380px !important;
+        max-height: 520px !important;
+    }
+
+    .elementor-element-8662dfd .wpr-slider-content {
+        padding: 30px 16px 40px 16px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        float: none !important;
+    }
+
+    .elementor-element-8662dfd .wpr-slider-title * {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+        padding: 0 !important;
+        margin: 0 0 8px 0 !important;
+    }
+
+    .elementor-element-8662dfd .wpr-slider-sub-title * {
+        font-size: 14px !important;
+        padding: 0 !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .elementor-element-8662dfd .wpr-slider-description p {
+        font-size: 13.5px !important;
+        line-height: 1.4 !important;
+        padding: 0 !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    .elementor-element-8662dfd .wpr-slider-dots {
+        top: auto !important;
+        bottom: 12px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   3. COUNTERS SECTION COMPACT SPACING (<= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    .elementor-element-7d0557e {
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+        padding: 0 14px !important;
+    }
+
+    .elementor-element-4c6ac69 > .elementor-element-populated,
+    .elementor-element-f290b41 {
+        padding: 18px 14px !important;
+        border-radius: 10px !important;
+    }
+
+    .elementor-element-503ce95,
+    .elementor-element-3775082 {
+        --gap: 12px 12px !important;
+        --row-gap: 12px !important;
+        --column-gap: 12px !important;
+        margin: 0 !important;
+    }
+
+    .elementor-counter-number-wrapper {
+        font-size: 32px !important;
+    }
+
+    .elementor-counter-title {
+        font-size: 13.5px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   4. APPOINTMENT CARDS & FORMS ALIGNMENT ON MOBILE (<= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    /* Dedicated appointment form cards wrapper */
+    html body .elementor-section.elementor-top-section.elementor-element-4251ca1,
+    html body .elementor-section.elementor-top-section.elementor-element-2a7311e,
+    html body .elementor-section.elementor-top-section.elementor-element-384d3e19 {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        padding-top: 24px !important;
+        padding-bottom: 32px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    html body .elementor-column.elementor-col-100.elementor-element-688aeba,
+    html body .elementor-column.elementor-col-100.elementor-element-1669edca,
+    html body .elementor-column.elementor-col-100.elementor-element-b4a1467 {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Inner White Card Wrapper for Appointment Forms */
+    html body .elementor-section.elementor-inner-section.elementor-element-0c0c228,
+    html body .elementor-section.elementor-inner-section.elementor-element-5839b1c,
+    html body .elementor-section.elementor-inner-section.appointment-form-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 22px 16px 24px 16px !important;
+        border-radius: 12px !important;
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+        box-sizing: border-box !important;
+    }
+
+    html body .elementor-element-0c0c228 > .elementor-container,
+    html body .elementor-element-5839b1c > .elementor-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Inner Column & Flex alignment overrides */
+    html body .elementor-inner-column,
+    html body .elementor-element-f20e24e,
+    html body .elementor-inner-column > .elementor-widget-wrap,
+    html body .elementor-element-f20e24e.elementor-column .elementor-widget-wrap,
+    html body .elementor-bc-flex-widget .elementor-column .elementor-widget-wrap,
+    html body .elementor-column[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        align-items: stretch !important;
+        align-content: stretch !important;
+        display: flex !important;
+        flex-direction: column !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Form Widget Wrapper */
+    html body .elementor-widget-wpr-form-builder,
+    html body .elementor-element.elementor-element-fd96863,
+    html body .elementor-element.elementor-element-a75f0ee,
+    html body .elementor-element.elementor-element-2231334,
+    html body .elementor-element.elementor-element-2e3aa7a,
+    html body .elementor-widget-formidable,
+    html body .frm_forms,
+    html body .frm-show-form,
+    html body .metform-form {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Form and Field Wrappers */
+    html body .wpr-form,
+    html body .wpr-form-fields-wrap,
+    html body .frm_fields_container,
+    html body .frm_form_fields {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 12px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Individual Field Groups */
+    html body .wpr-field-group,
+    html body .wpr-column,
+    html body .elementor-repeater-item-f7bddbf,
+    html body .elementor-repeater-item-eddfb84,
+    html body .elementor-repeater-item-8f8abb8,
+    html body .wpr-form-field-type-date,
+    html body .wpr-form-field-type-time,
+    html body .wpr-form-field-type-text,
+    html body .wpr-form-field-type-email,
+    html body .wpr-form-field-type-tel,
+    html body .wpr-form-field-type-textarea,
+    html body .wpr-form-field-type-submit,
+    html body .wpr-stp-btns-wrap,
+    html body .frm_form_field,
+    html body .frm12,
+    html body .frm_full {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        flex: 0 0 100% !important;
+        margin: 0 0 8px 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+        text-align: left !important;
+    }
+
+    /* Text Inputs, Date, Time, Email, Phone */
+    html body .wpr-form-field,
+    html body .wpr-form-field-textual,
+    html body input[type="date"].wpr-form-field,
+    html body input[type="time"].wpr-form-field,
+    html body input[type="text"].wpr-form-field,
+    html body input[type="email"].wpr-form-field,
+    html body input[type="tel"].wpr-form-field,
+    html body select.wpr-form-field,
+    html body .frm_form_field input[type="text"],
+    html body .frm_form_field input[type="email"],
+    html body .frm_form_field input[type="tel"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        padding: 10px 14px !important;
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        font-size: 15px !important;
+        line-height: 1.4 !important;
+        color: #333333 !important;
+        background-color: #ffffff !important;
+        border: 1px solid #d0d5dd !important;
+        border-radius: 6px !important;
+        box-sizing: border-box !important;
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        box-shadow: none !important;
+        text-align: left !important;
+        display: block !important;
+    }
+
+    /* Textarea Field */
+    html body textarea.wpr-form-field,
+    html body textarea.wpr-form-field-textual,
+    html body .frm_form_field textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        min-height: 90px !important;
+        height: auto !important;
+        padding: 12px 14px !important;
+        font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        color: #333333 !important;
+        background-color: #ffffff !important;
+        border: 1px solid #d0d5dd !important;
+        border-radius: 6px !important;
+        box-sizing: border-box !important;
+        resize: vertical !important;
+        white-space: pre-wrap !important;
+        word-break: normal !important;
+        display: block !important;
+        text-align: left !important;
+    }
+
+    /* Submit Button */
+    html body .wpr-button,
+    html body .wpr-button[type="submit"],
+    html body .wpr-step-tab .wpr-button,
+    html body .wpr-step-next,
+    html body .wpr-step-prev,
+    html body .wpr-stp-btns-wrap .wpr-button,
+    html body .frm_button_submit,
+    html body button[type="submit"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        height: 48px !important;
+        min-height: 48px !important;
+        padding: 12px 20px !important;
+        margin: 4px 0 0 0 !important;
+        background-color: #EF7B00 !important;
+        color: #ffffff !important;
+        font-family: "Poppins", sans-serif !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        border: none !important;
+        border-radius: 6px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        box-shadow: 0 4px 14px rgba(239, 123, 0, 0.35) !important;
+        cursor: pointer !important;
+        touch-action: manipulation !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   5. FLOATING ACTION BUTTONS (Mobile <= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    /* Phone Call Button */
+    html body .elementor-widget-wpr-phone-call,
+    html body .elementor-widget-wpr-phone-call .wpr-pc-wrapper,
+    html body .wpr-pc-btn,
+    html body .elementor-element-de6f571 .wpr-pc-btn,
+    html body .elementor-element-de6f571.wpr-pc-btn-align-fixed-right .wpr-pc-btn {
+        position: fixed !important;
+        right: 16px !important;
+        bottom: 74px !important;
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        min-height: 46px !important;
+        max-width: 46px !important;
+        max-height: 46px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+        z-index: 99999 !important;
+        background-color: #EF7B00 !important;
+        border: 2px solid #ffffff !important;
+        box-sizing: border-box !important;
+        touch-action: manipulation !important;
+    }
+
+    /* Scroll To Top Button */
+    html body .elementor-widget-wpr-scroll-to-top,
+    html body .elementor-widget-wpr-scroll-to-top .wpr-stt-wrapper,
+    html body .wpr-stt-btn,
+    html body .elementor-element-bbca014 .wpr-stt-btn,
+    html body .elementor-element-bbca014.wpr-stt-btn-align-fixed-right .wpr-stt-btn {
+        position: fixed !important;
+        right: 16px !important;
+        bottom: 18px !important;
+        width: 46px !important;
+        height: 46px !important;
+        min-width: 46px !important;
+        min-height: 46px !important;
+        max-width: 46px !important;
+        max-height: 46px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+        z-index: 99998 !important;
+        background-color: #0A1C43 !important;
+        border: 2px solid #ffffff !important;
+        box-sizing: border-box !important;
+        touch-action: manipulation !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   6. TOP BAR RESPONSIVENESS (<= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    .elementor-element-1fc2745 {
+        padding: 4px 12px !important;
+        margin: 0 !important;
+    }
+    .elementor-element-1fc2745 .elementor-container {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+    }
+    .elementor-element-62d28aa {
+        width: auto !important;
+        flex: 0 0 auto !important;
+    }
+    .elementor-element-a02ab74 {
+        width: auto !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+    .elementor-element-fce18a9 {
+        margin: 0 !important;
+    }
+    .elementor-element-fce18a9 .wpr-offcanvas-trigger {
+        padding: 5px 12px !important;
+        font-size: 11.5px !important;
+        font-weight: 600 !important;
+        border-radius: 4px !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   7. HEADER & 3-LINES HAMBURGER MOBILE MENU (<= 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    /* Hide Desktop Navigation bar */
+    .wpr-nav-menu-container {
+        display: none !important;
+    }
+
+    /* Ensure header container is relative with high z-index and no clipping */
+    .elementor-element-3cadbe5 {
+        position: relative !important;
+        z-index: 999999 !important;
+        overflow: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .elementor-element-3cadbe5 .e-con-inner {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 8px 16px !important;
+        width: 100% !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+    }
+
+    .elementor-element-0451bfe {
+        width: auto !important;
+        max-width: 160px !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .elementor-element-2373297 .wpr-logo-image img {
+        max-width: 46px !important;
+        height: auto !important;
+        display: block !important;
+    }
+
+    .elementor-element-dfe6d53 {
+        width: auto !important;
+        flex: 0 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        position: static !important;
+    }
+
+    .elementor-element-edad87a {
+        position: static !important;
+        display: block !important;
+        width: auto !important;
+    }
+
+    /* Mobile Container: Stays inline so the 3-lines toggle button stays visible in the header */
+    .wpr-mobile-nav-menu-container {
+        position: static !important;
+        display: block !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    /* 3-Lines Hamburger Button Wrapper */
+    .wpr-mobile-toggle-wrap {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 6px !important;
+        margin: 0 !important;
+        cursor: pointer !important;
+        touch-action: manipulation !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+    }
+
+    .wpr-mobile-toggle {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 32px !important;
+        height: 22px !important;
+        padding: 0 !important;
+        cursor: pointer !important;
+        background: transparent !important;
+        border: none !important;
+        box-sizing: border-box !important;
+    }
+
+    .wpr-mobile-toggle-line {
+        display: block !important;
+        width: 26px !important;
+        height: 3px !important;
+        background-color: #0A1C43 !important;
+        margin: 0 !important;
+        border-radius: 3px !important;
+        transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out, background-color 0.2s ease !important;
+        transform-origin: center !important;
+    }
+
+    /* 3-Lines Hamburger Active Transition */
+    .wpr-active-toggle .wpr-mobile-toggle-line:nth-child(1),
+    .wpr-mobile-toggle.wpr-active-toggle .wpr-mobile-toggle-line:nth-child(1) {
+        transform: translateY(9.5px) rotate(45deg) !important;
+        background-color: #F84365 !important;
+    }
+
+    .wpr-active-toggle .wpr-mobile-toggle-line:nth-child(2),
+    .wpr-mobile-toggle.wpr-active-toggle .wpr-mobile-toggle-line:nth-child(2) {
+        opacity: 0 !important;
+        transform: scale(0) !important;
+    }
+
+    .wpr-active-toggle .wpr-mobile-toggle-line:nth-child(3),
+    .wpr-mobile-toggle.wpr-active-toggle .wpr-mobile-toggle-line:nth-child(3) {
+        transform: translateY(-9.5px) rotate(-45deg) !important;
+        background-color: #F84365 !important;
+    }
+
+    /* Mobile Dropdown Navigation Menu List (Opens when 3-lines is clicked) */
+    .wpr-mobile-nav-menu {
+        display: none;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100vw !important;
+        max-width: 100% !important;
+        background: #ffffff !important;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15) !important;
+        z-index: 9999999 !important;
+        border-top: 3px solid #F84365 !important;
+        list-style: none !important;
+        padding: 6px 0 16px 0 !important;
+        margin: 0 !important;
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        box-sizing: border-box !important;
+    }
+
+    .wpr-mobile-nav-menu.wpr-menu-open,
+    .wpr-mobile-nav-menu.active {
+        display: block !important;
+        animation: wprMenuSlideDown 0.22s ease-out forwards;
+    }
+
+    @keyframes wprMenuSlideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .wpr-mobile-nav-menu > li {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-bottom: 1px solid #f0f2f5 !important;
+        box-sizing: border-box !important;
+    }
+
+    .wpr-mobile-nav-menu > li:last-child {
+        border-bottom: none !important;
+    }
+
+    .wpr-mobile-nav-menu > li > a,
+    .wpr-mobile-nav-menu .wpr-mobile-menu-item {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 13px 20px !important;
+        color: #1a2238 !important;
+        font-family: "Poppins", sans-serif !important;
+        font-size: 15px !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        transition: background 0.2s ease, color 0.2s ease !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+
+    .wpr-mobile-nav-menu > li > a:hover,
+    .wpr-mobile-nav-menu > li > a.wpr-active-menu-item,
+    .wpr-mobile-nav-menu .current_page_item > a {
+        background-color: #fff1f3 !important;
+        color: #F84365 !important;
+    }
+
+    /* Submenu for Doctors Dropdown */
+    .wpr-mobile-nav-menu .menu-item-has-children > a .wpr-sub-icon,
+    .wpr-mobile-nav-menu .menu-item-has-children > a::after {
+        display: inline-block !important;
+        font-size: 13px !important;
+        transition: transform 0.25s ease !important;
+    }
+
+    .wpr-mobile-nav-menu .menu-item-has-children.wpr-sub-open > a .wpr-sub-icon,
+    .wpr-mobile-nav-menu .menu-item-has-children.wpr-sub-open > a::after {
+        transform: rotate(180deg) !important;
+    }
+
+    .wpr-mobile-nav-menu .sub-menu,
+    .wpr-mobile-nav-menu .wpr-sub-menu {
+        display: none;
+        list-style: none !important;
+        padding: 4px 0 !important;
+        margin: 0 !important;
+        background: #f8fafc !important;
+        border-top: 1px solid #eef2f6 !important;
+        box-sizing: border-box !important;
+    }
+
+    .wpr-mobile-nav-menu .sub-menu.wpr-sub-open,
+    .wpr-mobile-nav-menu .sub-menu.active {
+        display: block !important;
+    }
+
+    .wpr-mobile-nav-menu .sub-menu li {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .wpr-mobile-nav-menu .sub-menu li a,
+    .wpr-mobile-nav-menu .wpr-mobile-sub-menu-item {
+        display: block !important;
+        padding: 10px 20px 10px 32px !important;
+        color: #475569 !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+
+    .wpr-mobile-nav-menu .sub-menu li a:hover {
+        background-color: #fff1f3 !important;
+        color: #F84365 !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   8. OFFCANVAS APPOINTMENT POPUP (<= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    .wpr-offcanvas-wrap {
+        position: fixed !important;
+        inset: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        background-color: rgba(0, 0, 0, 0.6) !important;
+        z-index: 9999999 !important;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .wpr-offcanvas-wrap.wpr-offcanvas-open {
+        display: block !important;
+        opacity: 1 !important;
+    }
+    .wpr-offcanvas-content {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 90vw !important;
+        max-width: 360px !important;
+        height: 100vh !important;
+        background: #ffffff !important;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.2) !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 20px 16px 40px 16px !important;
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .wpr-offcanvas-wrap.wpr-offcanvas-open .wpr-offcanvas-content {
+        transform: translateX(0) !important;
+    }
+    .wpr-close-offcanvas {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 18px !important;
+        cursor: pointer !important;
+        background: #f1f5f9 !important;
+        border-radius: 50% !important;
+        color: #333333 !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   9. FOOTER RESPONSIVE STACKING & SPACING (<= 767px)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    .elementor-315 .elementor-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .elementor-315 .elementor-column {
+        width: 100% !important;
+        margin-bottom: 16px !important;
+        text-align: center !important;
+    }
+    .elementor-315 .elementor-element.elementor-element-6cbc3e4 > .elementor-element-populated {
+        margin: 0 0 12px 0 !important;
+        --e-column-margin-right: 0px !important;
+    }
+    .elementor-315 .elementor-widget-icon-list .elementor-icon-list-items {
+        justify-content: center !important;
+    }
+    .elementor-315 .wpr-logo {
+        text-align: center !important;
+    }
+    .elementor-315 .wpr-logo-image img {
+        margin: 0 auto !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   10. TABLET RESPONSIVE ADJUSTMENTS (768px - 1024px)
+   -------------------------------------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    html body .elementor-section.elementor-inner-section.elementor-element-0c0c228,
+    html body .elementor-section.elementor-inner-section.elementor-element-5839b1c {
+        max-width: 600px !important;
+        margin: 0 auto !important;
+        padding: 30px 24px !important;
+    }
+    html body .wpr-pc-btn {
+        bottom: 74px !important;
+        right: 20px !important;
+    }
+    html body .wpr-stt-btn {
+        bottom: 18px !important;
+        right: 20px !important;
+    }
+}
