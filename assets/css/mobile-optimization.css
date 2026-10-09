@@ -878,11 +878,19 @@
 
     /* Strictly Hide Elements Configured as Hidden on Mobile */
     html body .elementor-hidden-mobile,
+    html body .elementor-hidden-mobile *,
     html body .elementor-element.elementor-element-fd96863,
+    html body .elementor-element-fd96863,
+    html body .elementor-element-fd96863 *,
+    html body #form1,
+    html body div#form1,
+    html body form#form1,
     html body .elementor-element.elementor-element-2e3aa7a,
-    html body .elementor-widget.elementor-hidden-mobile,
-    html body .elementor-element-fd96863.elementor-widget-wpr-form-builder,
-    html body .elementor-element-2e3aa7a.elementor-widget-wpr-form-builder {
+    html body .elementor-element-2e3aa7a,
+    html body .elementor-element-2e3aa7a *,
+    html body [data-id="fd96863"],
+    html body [data-id="2e3aa7a"],
+    html body .elementor-widget.elementor-hidden-mobile {
         display: none !important;
         height: 0 !important;
         min-height: 0 !important;
@@ -893,6 +901,7 @@
         overflow: hidden !important;
         visibility: hidden !important;
         pointer-events: none !important;
+        opacity: 0 !important;
     }
 
     /* Active Form Widget Wrappers */
@@ -913,6 +922,20 @@
         margin: 0 !important;
         padding: 0 !important;
         box-sizing: border-box !important;
+    }
+
+    /* Remove inner nested backgrounds/borders inside the appointment card */
+    html body .elementor-element-0c0c228 .elementor-2141,
+    html body .elementor-element-0c0c228 .elementor-element-5238662,
+    html body .elementor-element-0c0c228 .elementor-element-a7a0dc7,
+    html body .elementor-element-0c0c228 .mf-form-wrapper,
+    html body .elementor-element-0c0c228 .formpicker_warper {
+        background: transparent !important;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     /* Form and Field Wrappers */
