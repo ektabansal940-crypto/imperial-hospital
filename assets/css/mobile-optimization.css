@@ -876,16 +876,36 @@
         box-sizing: border-box !important;
     }
 
-    /* Form Widget Wrapper */
-    html body .elementor-widget-wpr-form-builder,
+    /* Strictly Hide Elements Configured as Hidden on Mobile */
+    html body .elementor-hidden-mobile,
     html body .elementor-element.elementor-element-fd96863,
+    html body .elementor-element.elementor-element-2e3aa7a,
+    html body .elementor-widget.elementor-hidden-mobile,
+    html body .elementor-element-fd96863.elementor-widget-wpr-form-builder,
+    html body .elementor-element-2e3aa7a.elementor-widget-wpr-form-builder {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        max-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    /* Active Form Widget Wrappers */
     html body .elementor-element.elementor-element-a75f0ee,
     html body .elementor-element.elementor-element-2231334,
-    html body .elementor-element.elementor-element-2e3aa7a,
     html body .elementor-widget-formidable,
+    html body .elementor-widget-metform,
     html body .frm_forms,
     html body .frm-show-form,
-    html body .metform-form {
+    html body .metform-form,
+    html body .mf-form-wrapper,
+    html body .metform-form-content,
+    html body .metform-form-main-wrapper {
         display: block !important;
         width: 100% !important;
         max-width: 100% !important;
@@ -899,7 +919,10 @@
     html body .wpr-form,
     html body .wpr-form-fields-wrap,
     html body .frm_fields_container,
-    html body .frm_form_fields {
+    html body .frm_form_fields,
+    html body .metform-form-content,
+    html body .elementor-element-5238662,
+    html body .elementor-element-a7a0dc7 {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
@@ -927,7 +950,13 @@
     html body .wpr-stp-btns-wrap,
     html body .frm_form_field,
     html body .frm12,
-    html body .frm_full {
+    html body .frm_full,
+    html body .elementor-widget-mf-date,
+    html body .elementor-widget-mf-time,
+    html body .elementor-widget-mf-textarea,
+    html body .elementor-widget-mf-button,
+    html body .mf-input-wrapper,
+    html body .mf-btn-wraper {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
@@ -949,7 +978,11 @@
     html body select.wpr-form-field,
     html body .frm_form_field input[type="text"],
     html body .frm_form_field input[type="email"],
-    html body .frm_form_field input[type="tel"] {
+    html body .frm_form_field input[type="tel"],
+    html body input.mf-input,
+    html body input.mf-date-input,
+    html body input.mf-time-input,
+    html body .mf-input-wrapper input {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
@@ -974,7 +1007,9 @@
     /* Textarea Field */
     html body textarea.wpr-form-field,
     html body textarea.wpr-form-field-textual,
-    html body .frm_form_field textarea {
+    html body .frm_form_field textarea,
+    html body textarea.mf-input,
+    html body textarea.mf-textarea {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
@@ -1004,7 +1039,10 @@
     html body .wpr-step-prev,
     html body .wpr-stp-btns-wrap .wpr-button,
     html body .frm_button_submit,
-    html body button[type="submit"] {
+    html body button[type="submit"],
+    html body button.metform-btn,
+    html body button.metform-submit-btn,
+    html body .elementor-element-1bbc2fd .metform-btn {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
